@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+href="https://fonts.googleapis.com/css?family=EB+Garamond|Inconsolata|Muli|Montserrat"
+    rel="stylesheet"
+    />
+  
+    <link rel="stylesheet" href="assets/styles/style.scss" />
+
+ 
+    <title>The Delphi Murders</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__spinner"></div>
+    </div>
+    
+    <aside id="sidebar">
+        <div id="nav-wrap">
+          <nav class="main-nav">
+            <!-- Logo -->
+            <a class="logo__link no-barba" href="/">
+             <div class="logo">
+                <h2 class="logo-mobile">Crime Club</h2>
+                <h2 class="word word--crimeclub" data-image-death="assets/images/crime-club/death.svg"
+                  data-images-char-1="assets/images/crime-club/c1.png,assets/images/crime-club/c2.png,assets/images/crime-club/c3.png"
+                  data-images-char-2="assets/images/crime-club/r1.png,assets/images/crime-club/r2.png,assets/images/crime-club/r3.png"
+                  data-images-char-3="assets/images/crime-club/i1.png,assets/images/crime-club/i2.png,assets/images/crime-club/i3.png"
+                  data-images-char-4="assets/images/crime-club/m1.png,assets/images/crime-club/m2.png,assets/images/crime-club/m3.png"
+                  data-images-char-5="assets/images/crime-club/e1.png,assets/images/crime-club/e2.png,assets/images/crime-club/e3.png">Crime</h2>
+                <div class="word word--club" data-image-revolver="assets/images/crime-club/revolver.svg"
+                  data-images-char-1="assets/images/crime-club/c3.png,assets/images/crime-club/c4.png,assets/images/crime-club/c5.png"
+                  data-images-char-2="assets/images/crime-club/l1.png,assets/images/crime-club/l2.png,assets/images/crime-club/l3.png"
+                  data-images-char-3="assets/images/crime-club/u1.png,assets/images/crime-club/u2.png,assets/images/crime-club/u3.png"
+                  data-images-char-4="assets/images/crime-club/b1.png,assets/images/crime-club/b2.png,assets/images/crime-club/b3.png">Club</div>
+              </div> 
+            </a>
+            <ul class="navigation">
+              <li>
+                <a href="mailto:crimeclub@gmail.com">crimeclub@gmail.com</a>
+              </li>
+            </ul>
+    
+            <div class="main-nav__menu-toggle">
+              <svg class="main-nav__burger-icon">
+                <use xlink:href="./assets/images/sprite.svg#icon-bars"></use>
+              </svg>
+              <!-- <span class="burger-menu"></span> -->
+            </div>
+            <button id="btn-search--open" class="search__button search__button--open">
+              <svg class="search__icon">
+                <use xlink:href="./assets/images/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </nav>
+          <div class="progress-bar"></div>
+        </div>
+        <div class="aside-menu">
+          <a class="close-menu" href="#">
+            close
+          </a>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Unsolved Murders</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Unsolved Disappearances</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Unidentified People</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Unexplained Deaths</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Book Reviews</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Movie Reviews</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Crime News</a>
+            </li>
+            <li class="menu__item menu__item--share">
+              <div class="share">
+                <a href="#" class="share__link">
+                  <svg class="share__icon">
+                    <use xlink:href="./assets/images/sprite.svg#icon-facebook-with-circle"></use>
+                  </svg>
+                </a>
+                <a href="#" class="share__link">
+                  <svg class="share__icon">
+                    <use xlink:href="./assets/images/sprite.svg#icon-pinterest-with-circle"></use>
+                  </svg>
+                </a>
+                <a href="#" class="share__link">
+                  <svg class="share__icon">
+                    <use xlink:href="./assets/images/sprite.svg#icon-twitter-with-circle"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    <div id="main">
+      <div id="barba-wrapper">
+        <div
+          class="barba-container"
+          data-prev="son.html"
+          data-next="jon-benet.html"
+          data-namespace="newContainer"
+        >
+          <div class="post__thumb post__thumb--prev">
+            <a href="son.html">
+              <div class="post__thumb__title post__thumb__title--prev">
+                <span>Son, A Psycopath and His Victims</span>
+              </div>
+              <div
+                class="post__thumb__image post__thumb__image--prev"               
+              >
+              <img src="./assets/images/son-olsen-200w.jpg" alt="">
+            </div>
+            </a>
+          </div>
+          <div class="post__thumb post__thumb--next">
+            <a href="jon-benet.html">
+              <div class="post__thumb__title post__thumb__title--next">
+                <span>JonBenét Murder</span>
+              </div>
+              <div
+                class="post__thumb__image post__thumb__image--next"
+               
+              >
+              <img src="./assets/images/jonbenet-200w.jpg" />
+            </div>
+            </a>
+          </div>
+
+          <header class="post__header">
+            <div class="post__header--image img-wrapper">
+              <img
+                class="post__image post__image--cover lazyload"
+                data-srcset="
+                  /assets/images/delphi-murder-sketch-320w.jpg 320w,
+                  /assets/images/delphi-murder-sketch-480w.jpg 480w,
+                  /assets/images/delphi-murder-sketch-600w.jpg 600w,
+                  /assets/images/delphi-murder-sketch-770w.jpg 770w,
+                  /assets/images/delphi-murder-sketch-900w.jpg 900w
+                "
+                data-sizes="(max-width: 320px) 319px,
+                        (max-width: 480px) 479px,
+                       (max-width: 600px) 599px,
+                       (max-width: 900px) 899px
+                      1400px"
+                data-src="assets/images/delphi-murder-sketch-1400w.jpg"
+                alt=""
+              />
+            </div>
+            <div class="post__header--title">
+              <div class="post__categories">
+                <a class="cat-link" href="#">
+                  <span class="post__categories-text">Unsolved Murders</span></a>
+              </div>
+              <div class="post__title-wrapper">
+                <h1 class="post__title">
+                  The Delphi Murders
+                </h1>
+                <h3 class="post__subTitle">
+                  Delphi, Indiana &ndash; February 13th, 2017
+                </h3>
+              </div>
+
+              <div class="post__header-scroll">
+                <div class="post__header-scroll__text">
+                  Scroll
+                </div>
+                <!-- <div class="arrow arrow--right"></div> -->
+                <svg class="post__header-scroll__arrow">
+                  <use
+                    xlink:href="./assets/images/sprite.svg#icon-long-arrow-right"
+                  ></use>
+                </svg>
+              </div>
+            </div>
+          </header>
+          <div class="post">
+            <section class="post__meta">
+              <div class="row">
+                <div class="col-1-of-4">
+                  <div class="post__meta">
+                    <div class="post__meta-item post__meta-item--date">
+                      <svg class="post__meta-icon">
+                        <use
+                          xlink:href="./assets/images/sprite.svg#icon-calendar"
+                        ></use>
+                      </svg>
+                      <span class="post__date">21.02.2018</span>
+                    </div>
+                    <div class="post__meta-item post__meta-item--author">
+                      <svg class="post__meta-icon">
+                        <use
+                          xlink:href="./assets/images/sprite.svg#icon-user"
+                        ></use>
+                      </svg>
+                      <div class="post__author">By <a href="#">Laura</a></div>
+                    </div>
+                    <div class="post__meta-item post__meta-item--tag">
+                      <svg class="post__meta-icon">
+                        <use
+                          xlink:href="./assets/images/sprite.svg#icon-tag"
+                        ></use>
+                      </svg>
+                      <div class="post__tags">
+                        <a href="#">Evidence</a> <a href="#">Identikit</a>
+                      </div>
+                    </div>
+
+                    <div class="share">
+                      <a href="#" class="share__link">
+                        <svg class="share__icon share__icon--facebook">
+                          <use
+                            xlink:href="./assets/images/sprite.svg#icon-facebook-with-circle"
+                          ></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="share__link">
+                        <svg class="share__icon share__icon--pinterest">
+                          <use
+                            xlink:href="./assets/images/sprite.svg#icon-pinterest-with-circle"
+                          ></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="share__link">
+                        <svg class="share__icon share__icon--twitter">
+                          <use
+                            xlink:href="./assets/images/sprite.svg#icon-twitter-with-circle"
+                          ></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2-of-4 large-col-3-of-4"></div>
+              </div>
+            </section>
+            <section class="post__body">
+              <div class="row">
+                <div class="col-1-of-4"></div>
+                <div class="col-2-of-4 large-col-3-of-4">
+                  <p>
+                    Fusce quis mi dapibus enim aliquam maximus. Sed vehicula mi
+                    in purus fringilla, non euismod tortor posuere. Proin
+                    laoreet felis neque, ac maximus metus pretium aliquam. Nulla
+                    massa ex, dignissim eu laoreet id, consectetur ac arcu.
+                    Donec mollis sem eu ligula luctus bibendum. Ut tincidunt sit
+                    amet tellus in sollicitudin. Fusce pharetra purus felis,
+                    quis pharetra nunc efficitur nec. Vestibulum commodo odio a
+                    sapien convallis faucibus. In hac habitasse platea dictumst.
+                    Nunc dignissim pharetra tincidunt. Maecenas vitae commodo
+                    turpis. Nam at tincidunt diam, vitae eleifend lacus.
+                  </p>
+
+                  <p>
+                    Ut nec turpis eget velit blandit euismod et sed nibh. Etiam
+                    feugiat nisi dui. Morbi placerat ornare nulla ac posuere.
+                    Praesent metus ex, lacinia in nisl sed, congue hendrerit
+                    lectus. Cras ante ante, iaculis ac nunc a, faucibus
+                    tincidunt sapien. Etiam vitae efficitur massa, at viverra
+                    mi. Nunc vitae lobortis purus. Aenean eget nisl vel eros
+                    congue hendrerit. Aenean ligula magna, ultrices porttitor
+                    felis sit amet, laoreet dapibus urna.
+                  </p>
+
+                  <h3 class="paragraph-title">Best Friends</h3>
+                  <p>
+                    Fusce a lorem tempus, aliquet mauris ut, scelerisque est. In
+                    commodo bibendum lorem, tempor vestibulum erat porta eget.
+                    Mauris sit amet risus quis ex hendrerit commodo. Integer eu
+                    elit faucibus, congue ex a, aliquet purus. Suspendisse et
+                    aliquet magna. Nam porta, mauris ac ullamcorper laoreet,
+                    turpis dui interdum dolor, et fringilla mauris enim et nisi.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus vel leo luctus, sollicitudin mauris in, fermentum
+                    turpis. Nam ultricies dolor dictum ex cursus ornare.
+                  </p>
+
+                  <p>
+                    Nunc vehicula tincidunt sodales. Praesent nunc est, gravida
+                    quis elit at, efficitur lobortis orci. Quisque lacinia leo
+                    at mi posuere, vel consectetur enim condimentum. Suspendisse
+                    ex ipsum, imperdiet at arcu eu, fringilla bibendum mi.
+                    Quisque vitae augue imperdiet, eleifend augue at, pretium
+                    augue. Pellentesque habitant morbi tristique senectus et
+                    netus et malesuada fames ac turpis egestas. Proin id tortor
+                    nec ligula iaculis ultricies vel at nibh. Cras viverra
+                    tellus sed orci congue, a viverra justo tempus. Donec quis
+                    libero nulla.
+                  </p>
+                  <p>
+                    Aenea elementum lacinia lacus, et feugiat nulla laoreet in.
+                    Nunc vel varius justo. Ut eget placerat erat. Nullam egestas
+                    interdum tellus, non sodales augue rutrum ac. Vestibulum
+                    auctor tempor ante non cursus. Phasellus mollis nec purus
+                    sit amet accumsan. In consequat, massa vel hendrerit
+                    ultrices, metus leo tincidunt elit, sit amet sollicitudin
+                    velit magna sed lorem. Integer gravida leo vitae orci
+                    semper, id ultricies lectus tristique. Aliquam elementum
+                    quam quis hendrerit venenatis. Nulla consequat gravida augue
+                    ac volutpat.
+                  </p>
+                  <h3 class="paragraph-title">The Bridge</h3>
+                  <p>
+                    Cras felis est, bibendum eu ipsum efficitur, dapibus iaculis
+                    quam. Aliquam tempus quam eget sollicitudin consequat. Fusce
+                    imperdiet magna leo, eget semper ligula aliquet ac. Nulla
+                    iaculis dictum tortor, eu vehicula lacus ornare ac. Aenean
+                    varius nisi vel sagittis mattis. Cras imperdiet sapien non
+                    neque lobortis viverra. Vivamus condimentum neque dui, a
+                    ornare ante vestibulum ut.
+                  </p>
+
+                  <p>
+                    Integer eget nulla semper, varius turpis id, ullamcorper
+                    nisl. Nunc volutpat eros non malesuada ullamcorper. Aliquam
+                    congue cursus elit ut auctor. Vestibulum nisi nulla,
+                    lobortis at est non, imperdiet convallis diam. Vivamus id
+                    massa risus. Etiam consectetur massa a tellus pulvinar
+                    semper. Maecenas congue lorem mattis, mollis lacus sit amet,
+                    suscipit dui. Vivamus consequat lectus in odio sagittis, sit
+                    amet imperdiet nulla mattis. Maecenas efficitur, magna ut
+                    cursus scelerisque, massa nisi faucibus dui, vel bibendum mi
+                    mauris at tellus. Nunc in nulla risus. Integer vestibulum
+                    egestas mollis. Aliquam sed lectus quis libero fermentum
+                    varius non sit amet tellus.
+                  </p>
+                  <p>
+                    Curabitur nec porttitor sapien, hendrerit gravida arcu. In
+                    feugiat elementum sodales. Suspendisse posuere nec nibh vel
+                    volutpat. Morbi sapien tortor, faucibus in nisl aliquam,
+                    tempus lobortis quam. Cras maximus libero vel augue pulvinar
+                    iaculis. Aenean ornare odio quis auctor porttitor. Ut
+                    sollicitudin, eros at vulputate lacinia, odio lectus luctus
+                    tellus, ac fermentum ante diam non nulla. Etiam pellentesque
+                    velit euismod semper pellentesque. Nulla eleifend eros
+                    mauris, quis sodales purus feugiat eget. Vestibulum
+                    imperdiet pretium justo, et dictum mi egestas quis.
+                    Suspendisse at pellentesque risus.
+                  </p>
+                  <p>
+                    Praesent leo eros, lobortis non semper at, pharetra luctus
+                    quam. Praesent egestas tortor magna, quis eleifend nisl
+                    dignissim id. Ut in dignissim quam, eget cursus mi. Vivamus
+                    viverra vehicula vehicula. Nulla rhoncus, ante non ornare
+                    lobortis, eros massa aliquam metus, ut ultricies enim diam
+                    ac orci.
+                  </p>
+
+                  <h3 class="paragraph-title">New Development</h3>
+                  <p>
+                    Integer eget nulla semper, varius turpis id, ullamcorper
+                    nisl. Nunc volutpat eros non malesuada ullamcorper. Aliquam
+                    congue cursus elit ut auctor. Vestibulum nisi nulla,
+                    lobortis at est non, imperdiet convallis diam. Vivamus id
+                    massa risus. Etiam consectetur massa a tellus pulvinar
+                    semper. Maecenas congue lorem mattis, mollis lacus sit amet,
+                    suscipit dui. Vivamus consequat lectus in odio sagittis, sit
+                    amet imperdiet nulla mattis. Maecenas efficitur, magna ut
+                    cursus scelerisque, massa nisi faucibus dui, vel bibendum mi
+                    mauris at tellus. Nunc in nulla risus. Integer vestibulum
+                    egestas mollis. Aliquam sed lectus quis libero fermentum
+                    varius non sit amet tellus.
+                  </p>
+                  <p>
+                    Curabitur nec porttitor sapien, hendrerit gravida arcu. In
+                    feugiat elementum sodales. Suspendisse posuere nec nibh vel
+                    volutpat. Morbi sapien tortor, faucibus in nisl aliquam,
+                    tempus lobortis quam. Cras maximus libero vel augue pulvinar
+                    iaculis. Aenean ornare odio quis auctor porttitor. Ut
+                    sollicitudin, eros at vulputate lacinia, odio lectus luctus
+                    tellus, ac fermentum ante diam non nulla. Etiam pellentesque
+                    velit euismod semper pellentesque. Nulla eleifend eros
+                    mauris, quis sodales purus feugiat eget. Vestibulum
+                    imperdiet pretium justo, et dictum mi egestas quis.
+                    Suspendisse at pellentesque risus.
+                  </p>
+                  <div class="mobile-links">
+                    <div class="mobile-links__item mobile-links__item--prev">
+                      <span>Previous Article</span>
+                      <a href="son.html">Son</a>
+                    </div>
+                    <div class="mobile-links__item mobile-links__item--next">
+                      <span>Next Article</span>
+                      <a href="jon-benet.html">JonBenét Ramsey</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-3-of-4 -->
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer" id="footer">
+        <div class="footer__info">
+          <div class="footer__item footer__item--social">
+            <h4 class="footer__title">Join the conversation!</h4>
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link">
+                  <svg
+                    class="footer-social__icon footer-social__icon--facebook"
+                  >
+                    <use
+                      xlink:href="./assets/images/sprite.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link">
+                  <svg class="footer-social__icon footer-social__icon--twitter">
+                    <use
+                      xlink:href="./assets/images/sprite.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item--disclaimer">
+            <h4 class="footer__title">About Us</h4>
+            <p>
+              Nam iaculis, justo sit amet sagittis dignissim, mauris magna
+              efficitur tortor, in venenatis magna tortor ac lacus. Aliquam
+              suscipit metus id metus viverra sodales. Donec eleifend risus
+              nisl, eget aliquam turpis egestas et.
+            </p>
+          </div>
+          <div class="footer__item footer__item--tagcloud">
+              <div class="tagcloud">
+                <h4 class="footer__title">Tag Cloud</h4>
+                <a class="tagcloud__link" href="#">Cold Case</a>
+                <a class="tagcloud__link" href="#">Murder</a>
+                <a class="tagcloud__link" href="#">Suicide</a>
+                <a class="tagcloud__link" href="#">Murder</a>
+                <a class="tagcloud__link" href="#">genealogical DNA</a>
+                <a class="tagcloud__link" href="#">death by drowning</a>
+                <a class="tagcloud__link" href="#">Death by Hanging</a>
+              </div>
+            </div>
+
+          <div class="footer__item footer__item--categories">
+            <h4 class="footer__title">Crime categories</h4>
+            <ul class="footer-cat__list">
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unsolved Murders</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unsolved Disappearances</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unexplained Deaths</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unidentified People</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Book Reviews</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Movie Reviews</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item--about">
+            <h4 class="footer__title">Disclaimer</h4>
+            <p>
+              Ut a nisl non nibh semper fringilla sit amet id mauris. Praesent
+              tincidunt, mauris nec finibus vehicula, tellus massa aliquet
+              tellus, sit amet rutrum nunc magna at lacus. Aenean et ultricies
+              leo. In nisl elit, sodales in arcu ut, euismod accumsan nunc. Sed
+              quis luctus elit.
+            </p>
+          </div>
+        </div>
+        <div class="footer-credit">
+          <p class="copyright">&copy; Crime Club</p>
+          <p class="credit">Built by <a href="#">raggiorama</a></p>
+        </div>
+      </footer>
+    </div>
+    <!-- end #main-->
+    <div class="search">
+      <button
+        id="btn-search-close"
+        class="search__button search__button--close"
+        aria-label="Close search form"
+        aria-hidden="true"
+      >
+        <svg class="close-icon">
+          <use xlink:href="./assets/images/sprite.svg#icon-cross1"></use>
+        </svg>
+      </button>
+      <form class="search__form" action="">
+        <input
+          class="search__input"
+          name="search"
+          type="search"
+          placeholder="type here"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <span class="search__info">Hit enter to search or ESC to close</span>
+      </form>
+     
+    </div>
+    <!-- search -->
+    <!-- build:js /assets/scripts/App.js -->
+    <script type="module" src="./assets/scripts/App.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

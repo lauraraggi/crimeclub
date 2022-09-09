@@ -1,0 +1,56 @@
+/* Fonts */
+$font-serif: "EB Garamond", Georgia, serif;
+$font-monospace: "Inconsolata", Consolas, monospace;
+$font-sans: "Muli", Futura, sans-serif;
+
+/* Colors */
+/* $color-light-grey: #c6c5c5;
+    $color-medium-grey: #9c9999;
+  $color-dark-grey: #313030; */
+$color-white: #f1f1f1;
+$color-black: #0a100d;
+
+/* RGB */
+$color-grey-green: #b9baa3;
+$color-light-grey: #f2f2ee;
+$color-light-grey-2: #ebebe4;
+$color-medium-grey: #c3c2b7;
+$color-medium-grey-2: #b4b2a4;
+$color-dark-grey: #5d5c58;
+$color-dark-grey-2: #2f2f2d;
+$color-red: #a22c29;
+$color-dark-red: rgba(144, 41, 35, 1);
+
+$postThumbWidth: 120px;
+
+/* Layout */
+$padding-left: 4rem;
+$padding-right: 4rem;
+$layout-width: 180rem;
+
+/* Grid */
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 4rem;
+$col-2-of-4: calc(
+  2 * (calc((100% - 3 * $gutter-horizontal) / 4)) + $gutter-horizontal
+);
+$col-1-of-4: calc((100% - 3 * $gutter-horizontal) / 4);
+$col-1-of-2: calc((100% - $gutter-horizontal) / 2);
+
+/* Media Query
+
+xsmall    31.25em 500px 
+small     37.5em  600px   
+medium    56.25em 900px 
+large     75em    1200px
+xlarge    87.5em  1400px
+
+*/
+
+$xsmallLayout: 31.25em;
+$smallLayout: 37.5em;
+$mediumLayout: 56.25em;
+$largeLayout: 75em;
+$xlargeLayout: 87.5em;

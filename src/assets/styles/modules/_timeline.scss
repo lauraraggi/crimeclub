@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+.timeline-wrap {
+  /* max-height: 100%; */
+  overflow-y: auto;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+
+  /* overflow-y: auto; */
+
+  & div::after {
+    content: "";
+    width: 2px;
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0rem;
+    left: 60px;
+    z-index: 1;
+    background: $color-light-grey-2;
+  }
+
+  h4 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15rem;
+    color: $color-red;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: $font-monospace;
+    align-self: flex-start;
+  }
+
+  & section.year {
+    position: relative;
+    display: flex;
+
+    & section {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & ul {
+        padding: 0 0 0 81px;
+        list-style: none;
+        font-size: 1.8rem;
+        color: $color-dark-grey;
+
+        &:first-of-type::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: $color-light-grey-2;
+          border: 2px solid #ffffff;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%;
+          position: absolute;
+          left: 54px;
+          top: 3px;
+          z-index: 2;
+        }
+
+        li {
+          margin-bottom: 1rem;
+
+          &::before {
+            content: "·";
+            margin-left: -0.5rem;
+            padding-right: 0.3rem;
+          }
+        }
+      }
+    }
+
+    &:first-child section {
+      /* margin-top: -1.3em; */
+      padding-bottom: 0px;
+    }
+  }
+}

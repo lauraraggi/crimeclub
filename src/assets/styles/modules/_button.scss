@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+
+.btn__featured {
+  &,
+  &:link,
+  &:visited {
+    font-family: $font-monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 3px solid;
+    font-size: 1.5rem;
+    position: relative;
+    transition: border-color 0.4s, color 0.4s;
+    z-index: 1;
+    color: $color-white;
+    border-color: $color-white;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      /* IE10+ CSS styles go here */
+     width: auto;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-white;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 1, 1);
+    transform: scale3d(0.7, 1, 1);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  &:hover {
+    color: $color-black;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

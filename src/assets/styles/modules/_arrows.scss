@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.arrow {
+  position: relative;
+  border-bottom: 1px solid $color-dark-grey;
+  width: 30px;
+  display: block;
+
+  &--right {
+    &:before {
+      transform-origin: top right;
+      top: 0;
+      right: 0;
+    }
+
+    &:after {
+      transform-origin: bottom right;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &:before,
+  &:after {
+    background-color: $color-dark-grey;
+    display: block;
+    border-bottom: 1px solid $color-dark-grey;
+    width: 5px;
+    content: "";
+    position: absolute;
+  }
+
+  &:before {
+    transform: rotate(40deg);
+  }
+
+  &:after {
+    transform: rotate(-40deg);
+  }
+}

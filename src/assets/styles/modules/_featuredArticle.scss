@@ -1,0 +1,160 @@
+@use "../abstracts" as *;
+.featuredArticle {
+  color: $color-white;
+  /* position: sticky;
+  position: -webkit-sticky; */
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 2rem;
+  flex: 0 0 $col-2-of-4;
+  align-self: start;
+  /* height: calc(100vh - 67px); */
+  background-color: $color-black;
+  overflow: hidden;
+
+  a,
+  &:link,
+  &:visited {
+    color: $color-white;
+  } 
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    flex: 0 0 48.5%;
+  }
+
+
+  @media only screen and (max-width: $xlargeLayout) {
+    /* 1400px */
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: $mediumLayout) {
+    display: block;
+    position: relative;
+    top: 0 !important;
+    height: auto !important;
+    margin-bottom: 4rem;
+  }
+
+  &__info {
+    flex: 0 1 50%;
+    min-height: 50rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      & > * {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin: 2rem 0;
+
+      @media only screen and (max-width: $mediumLayout) {
+        margin-top: 0;
+      }
+    }
+
+    @media only screen and (max-width: $xlargeLayout) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      padding-bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    @media only screen and (max-width: $mediumLayout) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      height: auto;
+      padding-top: 0;
+      background-color: $color-black;
+      min-height: auto;
+      display: block;
+      padding-bottom: 2em;
+      box-sizing: border-box;
+    }
+  }
+
+  &__date {
+    font-size: 1.5rem;
+    color: $color-medium-grey;
+    text-transform: uppercase;
+    font-family: $font-monospace;
+  }
+
+  &__img-wrapper {
+    flex: 0 1 50%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100vh;
+
+    @media only screen and (max-width: $mediumLayout) {
+      height: 30rem;
+    }
+
+    &--cover {
+      object-fit: cover;
+    }
+  }
+
+  &__category {
+    font-family: $font-monospace;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    padding: 0.5rem 1rem;
+    background-color: $color-light-grey-2;
+    color: $color-black;
+    box-sizing: border-box;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      
+      left: 50%;
+      transform: translate(-50%, 30%); 
+      width: auto;
+    }
+
+    @media only screen and (max-width: $mediumLayout) {
+      display: inline-block;
+      transform: translateY(-100%);
+      position: relative;
+      top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 3.8rem;
+    font-weight: 400;
+    padding: 0 5rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $xlargeLayout) {
+      font-size: 3.2rem;
+    }
+
+    @media only screen and (max-width: $smallLayout) {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  p {
+    padding: 0 5rem;
+  }
+}

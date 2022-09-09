@@ -1,0 +1,105 @@
+@use "../abstracts" as *;
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: $color-black;
+
+  &__img {
+    transition: all 0.3s;
+  }
+
+  &__category {
+    color: red;
+    writing-mode: vertical-rl;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 50%;
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: all 0.3s;
+    font-family: Inconsolata, Monaco, monospace;
+  }
+
+  &__date {
+    color: $color-medium-grey;
+    font-size: 1.4rem;
+    font-family: $font-monospace;
+  }
+
+  &__titleWrap {
+    background: $color-black;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__meta {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    grid-column: 3 / -1;
+    transition: opacity 0.4s, transform 0.3s;
+    backface-visibility: visible;
+    display: grid;
+    grid-template-columns: minmax(40px, 1fr) minmax(100px, 3fr);
+    transform: translate3d(0, 100px, 0);
+    width: 100%;
+    text-align: center;
+
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    & p {
+      font-size: 1.2rem;
+      font-family: $font-monospace;
+      padding: 0.4rem 1rem;
+
+      background-color: rgba($color-white, 0.9);
+      border-bottom: 1px solid grey;
+      color: $color-black;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 62%;        
+      }
+
+      &.tag {
+        text-transform: uppercase;
+        border-right: 1px solid;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          flex: 0 0 30%;
+        }
+      }
+    }
+  }
+
+  &:hover &__img {
+    transform: scale(0.6);
+    opacity: 0.2;
+  }
+
+  &:hover &__category {
+    opacity: 1;
+    transform: translateX(-10px) rotate(180deg);
+  }
+
+  &:hover &__meta {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+a.card__heading--link {
+  font-size: 2rem;
+  color: $color-white;
+  text-decoration: none;
+  display: block;
+}

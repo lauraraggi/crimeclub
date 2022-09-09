@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Inconsolata|Muli|Montserrat"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles/style.scss" />
+ 
+
+  <title>Home - Crime Club</title>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader__spinner"></div>
+  </div>
+  <aside id="sidebar">
+    <div id="nav-wrap">
+      <nav class="main-nav">
+        <!-- Logo -->
+        <a class="logo__link" href="/">
+         <div class="logo">
+            <h2 class="logo-mobile">Crime Club</h2>
+            <h2 class="word word--crimeclub" data-image-death="assets/images/crime-club/death.svg"
+              data-images-char-1="assets/images/crime-club/c1.png,assets/images/crime-club/c2.png,assets/images/crime-club/c3.png"
+              data-images-char-2="assets/images/crime-club/r1.png,assets/images/crime-club/r2.png,assets/images/crime-club/r3.png"
+              data-images-char-3="assets/images/crime-club/i1.png,assets/images/crime-club/i2.png,assets/images/crime-club/i3.png"
+              data-images-char-4="assets/images/crime-club/m1.png,assets/images/crime-club/m2.png,assets/images/crime-club/m3.png"
+              data-images-char-5="assets/images/crime-club/e1.png,assets/images/crime-club/e2.png,assets/images/crime-club/e3.png">Crime</h2>
+            <div class="word word--club" data-image-revolver="assets/images/crime-club/revolver.svg"
+              data-images-char-1="assets/images/crime-club/c3.png,assets/images/crime-club/c4.png,assets/images/crime-club/c5.png"
+              data-images-char-2="assets/images/crime-club/l1.png,assets/images/crime-club/l2.png,assets/images/crime-club/l3.png"
+              data-images-char-3="assets/images/crime-club/u1.png,assets/images/crime-club/u2.png,assets/images/crime-club/u3.png"
+              data-images-char-4="assets/images/crime-club/b1.png,assets/images/crime-club/b2.png,assets/images/crime-club/b3.png">Club</div>
+          </div> 
+        </a>
+        <ul class="navigation">
+          <li>
+            <a href="mailto:crimeclub@gmail.com">crimeclub@gmail.com</a>
+          </li>
+        </ul>
+
+        <div class="main-nav__menu-toggle">
+          <svg class="main-nav__burger-icon">
+            <use xlink:href="./assets/images/sprite.svg#icon-bars"></use>
+          </svg>
+          <!-- <span class="burger-menu"></span> -->
+        </div>
+        <button id="btn-search--open" class="search__button search__button--open">
+          <svg class="search__icon">
+            <use xlink:href="./assets/images/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </nav>
+      <div class="progress-bar"></div>
+    </div>
+    <div class="aside-menu">
+      <a class="close-menu" href="#">
+        close
+      </a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Unsolved Murders</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Unsolved Disappearances</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Unidentified People</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Unexplained Deaths</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Book Reviews</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Movie Reviews</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Crime News</a>
+        </li>
+        <li class="menu__item menu__item--share">
+          <div class="share">
+            <a href="#" class="share__link">
+              <svg class="share__icon">
+                <use xlink:href="./assets/images/sprite.svg#icon-facebook-with-circle"></use>
+              </svg>
+            </a>
+            <a href="#" class="share__link">
+              <svg class="share__icon">
+                <use xlink:href="./assets/images/sprite.svg#icon-pinterest-with-circle"></use>
+              </svg>
+            </a>
+            <a href="#" class="share__link">
+              <svg class="share__icon">
+                <use xlink:href="./assets/images/sprite.svg#icon-twitter-with-circle"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <div id="main" class="main--home">
+    
+    <section class="inner">
+      <div class="featuredArticle">
+        <div class="featuredArticle__img-wrapper img-wrapper">
+          <img class="featuredArticle__img featuredArticle__img--cover lazyload" data-srcset="./assets/images/jonbenet-320w.jpg 320w,
+                      ./assets/images/jonbenet-480w.jpg 480w,
+                      ./assets/images/jonbenet-600w.jpg 600w,
+                      ./assets/images/jonbenet-770w.jpg 770w,
+                      ./assets/images/jonbenet-900w.jpg 900w
+                    " data-sizes="(max-width: 320px) 319px,
+                              (max-width: 480px) 479px,
+                             (max-width: 600px) 599px,
+                             (max-width: 900px) 899px
+                            900" data-src="./assets/images/jonbenet-900w.jpg" alt="" />
+        </div>
+
+        <div class="featuredArticle__info">
+          <div class="featuredArticle__category">
+            Featured
+          </div>
+          <p class="featuredArticle__date">
+            1 Jun 2019
+          </p>
+          <a href="./jon-benet.html">
+            <h2 class="featuredArticle__title">
+              The murder of JonBenet Ramsey
+            </h2>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            tempore quasi ut, repellendus esse placeat maiores. Deserunt,
+            distinctio dolor ab ea, eligendi blanditiis aliquam et porro
+            laudantium, odit vero dignissimos...
+          </p>
+          <a href="./jon-benet.html" class="btn__featured btn--white">Read more</a>
+        </div>
+      </div>
+      <div class="article-list">
+        <div class="grid-sizer"></div>
+        <div class="article__item article__item--with-border">
+          <a class="article__item__clickable" href="./delphi-murders.html">
+            <div class="article__item-header">
+              Unsolved Murders
+            </div>
+            <div class="article__item__inner">
+              <p class="article__item__date">20 May 2018</p>
+              <h4 class="article__item__title">The Delphi Murders</h4>
+
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+
+              <div class="article__item-image-wrap">
+                <img class="article__item-image" srcset="
+                      ./assets/images/delphi-murder-composite-200w.jpg 200w,
+                      ./assets/images/delphi-murder-composite-300w.jpg 300w,
+                      ./assets/images/delphi-murder-composite-400w.jpg 400w,
+                      ./assets/images/delphi-murder-composite-600w.jpg 600w
+                    " sizes="(max-width: 320px) 156px,
+                              (max-width: 480px) 255px,
+                             (max-width: 600px) 320px,
+                            400px" src="./assets/images/delphi-murder-composite-600w.jpg"
+                  alt="Delphi Murder Composite" />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="article__item article__item--with-border">
+          <a class="article__item__clickable" href="javascript:void(0)">
+            <div class="article__item-header">
+              Unsolved Disapperance
+            </div>
+            <div class="article__item__inner">
+              <p class="article__item__date">
+                20 May 2019
+              </p>
+              <h4 class="article__item__title">
+                The disappearance of Erika Ansermin
+              </h4>
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+
+              <div class="article__item-image-wrap">
+                <img class="article__item-image" srcset="
+                      ./assets/images/erika-ansermin-200w.jpg 200w,
+                      ./assets/images/erika-ansermin-300w.jpg 300w,
+                      ./assets/images/erika-ansermin-400w.jpg 400w,
+                      ./assets/images/erika-ansermin-600w.jpg 600w
+                    " sizes="(max-width: 320px) 156px,
+                              (max-width: 480px) 255px,
+                             (max-width: 600px) 320px,
+                            400px" src="./assets/images/erika-ansermin-600w.jpg" alt="Erika Ansermin Photo" />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="article__item article__item--media">
+          <a class="article__item__clickable article__item__clickable--media" href="./son.html">
+            <div class="article__item-header article__item-header--full">
+              Book Review
+            </div>
+            <img class="article__item-image--media" srcset="
+                  ./assets/images/son-olsen-250w.jpg 250w,
+                  ./assets/images/son-olsen-300w.jpg 300w,
+                  ./assets/images/son-olsen-400w.jpg 400w,
+                  ./assets/images/son-olsen-600w.jpg 600w,
+                  ./assets/images/son-olsen-800w.jpg 800w
+                " sizes="(max-width: 320px) 297px,
+                              (max-width: 480px) 459px,
+                             (max-width: 600px) 573px,
+                             (max-width: 900px) 385px,
+                             (max-width: 1200px) 248px,
+                             (max-width: 1400px) 299px
+                            400px" src="./assets/images/son-olsen-800w.jpg" alt="Book Cover of Son by Jack Olsen" />
+            <div class="article__item__inner">
+              <p class="article__item__date article__item__date--media">
+                20 May 2019
+              </p>
+              <h4 class="article__item__title">
+                Son, A Psycopath and His Victims
+              </h4>
+
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="article__item article__item--news article__item--with-border">
+          <a class="article__item__clickable" href="javascript:void(0)">
+            <div class="article__item-header article__item-header--abs">
+              News
+            </div>
+            <div class="image-wrap--news">
+              <img class="image--news" src="./assets/images/emanuela.jpg" alt="" />
+            </div>
+
+            <div class="article__item__inner">
+              <div class="news-meta">
+                <p class="news-meta__location">Rome (Italy)</p>
+                <span class="news-meta__dot">&#9679;</span>
+                <p class="news-meta__date">20 May 2019</p>
+              </div>
+              <!-- <p class="article__item__date">20 May 2019</p> -->
+              <h4 class="article__item__title">
+                Police digging church basement in search for Emanuela Orlandi
+              </h4>
+
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="article__item article__item--with-border">
+          <a class="article__item__clickable" href="./delphi-murders.html">
+            <div class="article__item-header">
+              Unsolved Murders
+            </div>
+            <div class="article__item__inner">
+              <p class="article__item__date">20 May 2018</p>
+              <h4 class="article__item__title">The Delphi Murders</h4>
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+
+              <div class="article__item-image-wrap">
+                <img class="article__item-image" srcset="
+                      ./assets/images/delphi-murder-composite-200w.jpg 200w,
+                      ./assets/images/delphi-murder-composite-300w.jpg 300w,
+                      ./assets/images/delphi-murder-composite-400w.jpg 400w,
+                      ./assets/images/delphi-murder-composite-600w.jpg 600w
+                    " sizes="(max-width: 320px) 156px,
+                              (max-width: 480px) 255px,
+                             (max-width: 600px) 320px,
+                            400px" src="./assets/images/delphi-murder-composite-600w.jpg"
+                  alt="Delphi Murder Composite" />
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="article__item article__item--with-border">
+          <a class="article__item__clickable" href="javascript:void(0)">
+            <div class="article__item-header">
+              Unsolved Disapperance
+            </div>
+            <div class="article__item__inner">
+              <p class="article__item__date">20 May 2018</p>
+              <h4 class="article__item__title">
+                The disappearance of Erika Ansermin
+              </h4>
+
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+
+              <div class="article__item-image-wrap">
+                <img class="article__item-image" srcset="
+                      ./assets/images/erika-ansermin-200w.jpg 200w,
+                      ./assets/images/erika-ansermin-300w.jpg 300w,
+                      ./assets/images/erika-ansermin-400w.jpg 400w,
+                      ./assets/images/erika-ansermin-600w.jpg 600w
+                    " sizes="(max-width: 320px) 156px,
+                              (max-width: 480px) 255px,
+                             (max-width: 600px) 320px,
+                            400px" src="./assets/images/erika-ansermin-600w.jpg" alt="Erika Ansermin Photo" />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="article__item article__item--with-border">
+          <a class="article__item__clickable" href="javascript:void(0)">
+            <div class="article__item-header">
+              Unsolved Murders
+            </div>
+            <div class="article__item__inner">
+              <p class="article__item__date">20 May 2018</p>
+              <h4 class="article__item__title">The Setagaya Murders</h4>
+
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+
+              <div class="article__item-image-wrap">
+                <img class="article__item-image" srcset="
+                      ./assets/images/miyazawa-family-200w.jpg 200w,
+                      ./assets/images/miyazawa-family-300w.jpg 300w,
+                      ./assets/images/miyazawa-family-400w.jpg 400w,
+                      ./assets/images/miyazawa-family-600w.jpg 600w
+                    " sizes="(max-width: 320px) 156px,
+                              (max-width: 480px) 255px,
+                             (max-width: 600px) 320px,
+                            400px" src="./assets/images/miyazawa-family-600w.jpg" alt="Miyazawa Family Photo" />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="article__item article__item--media">
+          <a class="article__item__clickable article__item__clickable--media" href="javascript:void(0)">
+            <div class="article__item-header article__item-header--full">
+              Movie Review
+            </div>
+
+            <img class="article__item-image--media" srcset="
+                  ./assets/images/henry-movie-250w.jpg 250w,
+                  ./assets/images/henry-movie-300w.jpg 300w,
+                  ./assets/images/henry-movie-400w.jpg 400w,
+                  ./assets/images/henry-movie-600w.jpg 600w,
+                  ./assets/images/henry-movie-800w.jpg 800w
+                " sizes="(max-width: 320px) 297px,
+                              (max-width: 480px) 459px,
+                             (max-width: 600px) 573px,
+                             (max-width: 900px) 385px,
+                             (max-width: 1200px) 248px,
+                             (max-width: 1400px) 299px
+                            400px" src="./assets/images/henry-movie-800w.jpg"
+              alt="Movie Cover of Henry Portrait of a Serial Killer" />
+            <div class="article__item__inner">
+              <p class="article__item__date article__item__date--media">
+                16 Jun 2018
+              </p>
+              <h4 class="article__item__title">
+                Henry, Portrait of a Serial Killer
+              </h4>
+
+              <p class="article__item__preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem dignissimos aliquid provident, autem nostrum
+                blanditiis...
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="cards">
+      <div class="row">
+        <div class="col-1-of-4 medium-col-2-of-4">
+          <div class="card-wrap">
+            <div class="card">
+              <a href="javascript:void(0)">
+                <img class="card__img lazyload" data-srcset="
+                      ./assets/images/yogurt-full-300w.jpg 300w,
+                      ./assets/images/yogurt-full-400w.jpg 400w,
+                      ./assets/images/yogurt-full-500w.jpg 500w,
+                      ./assets/images/yogurt-full-600w.jpg 600w
+                    " data-sizes="(max-width: 320px) 297px,
+                                (max-width: 480px) 456px,
+                               (max-width: 900px) 600px,
+                               (max-width: 1200px) 540px,
+                               (max-width: 1400px) 300px
+                              400px" data-src="./assets/images/yogurt-full-600w.jpg" alt="Photo of Victims" />
+
+                <div class="card__category">
+                  Unsolved Murder
+                </div>
+
+                <div class="card__meta">
+                  <p class="tag">Category</p>
+                  <p>Cold Case</p>
+                  <p class="tag">Victims</p>
+                  <p>4</p>
+                  <p class="tag">Where</p>
+                  <p>Austin, Texas (USA)</p>
+                  <p class="tag">When</p>
+                  <p>December 5 1991</p>
+                  <p class="tag">Crime</p>
+                  <p>Murder, Arson</p>
+                </div>
+              </a>
+            </div>
+            <div class="card__titleWrap">
+              <h4 class="card__heading">
+                <a class="card__heading--link" href="javascript:void(0)">Yogurt Shop Murders</a>
+              </h4>
+              <div class="card__date">20.12.2018</div>
+            </div>
+          </div>
+          <!-- card-wrap -->
+        </div>
+        <!-- col-1-of-4 -->
+
+        <div class="col-1-of-4 medium-col-2-of-4">
+          <div class="card-wrap">
+            <div class="card">
+              <a href="javascript:void(0)">
+                <img class="card__img lazyload" data-srcset="
+                      ./assets/images/yogurt-full-300w.jpg 300w,
+                      ./assets/images/yogurt-full-400w.jpg 400w,
+                      ./assets/images/yogurt-full-500w.jpg 500w,
+                      ./assets/images/yogurt-full-600w.jpg 600w
+                    " data-sizes="(max-width: 320px) 297px,
+                                (max-width: 480px) 456px,
+                               (max-width: 900px) 600px,
+                               (max-width: 1200px) 540px,
+                               (max-width: 1400px) 300px
+                              400px" data-src="./assets/images/yogurt-full-600w.jpg" alt="Photo of Victims" />
+
+                <div class="card__category">
+                  Unsolved Murder
+                </div>
+
+                <div class="card__meta">
+                  <p class="tag">Category</p>
+                  <p>Cold Case</p>
+                  <p class="tag">Victims</p>
+                  <p>4</p>
+                  <p class="tag">Where</p>
+                  <p>Austin, Texas (USA)</p>
+                  <p class="tag">When</p>
+                  <p>December 5 1991</p>
+                  <p class="tag">Crime</p>
+                  <p>Murder, Arson</p>
+                </div>
+              </a>
+            </div>
+            <div class="card__titleWrap">
+              <h4 class="card__heading">
+                <a class="card__heading--link" href="javascript:void(0)">Yogurt Shop Murders</a>
+              </h4>
+              <div class="card__date">20.12.2018</div>
+            </div>
+          </div>
+          <!-- card-wrap -->
+        </div>
+        <!-- col-1-of-4 -->
+
+        <div class="col-1-of-4 medium-col-2-of-4">
+          <div class="card-wrap">
+            <div class="card">
+              <a href="#">
+                <img class="card__img lazyload" data-srcset="
+                      ./assets/images/yogurt-full-300w.jpg 300w,
+                      ./assets/images/yogurt-full-400w.jpg 400w,
+                      ./assets/images/yogurt-full-500w.jpg 500w,
+                      ./assets/images/yogurt-full-600w.jpg 600w
+                    " data-sizes="(max-width: 320px) 297px,
+                                (max-width: 480px) 456px,
+                               (max-width: 900px) 600px,
+                               (max-width: 1200px) 540px,
+                               (max-width: 1400px) 300px
+                              400px" data-src="./assets/images/yogurt-full-600w.jpg" alt="Photo of Victims" />
+
+                <!-- <div class="card__category">
+                      Unsolved Murder
+                    </div> -->
+
+                <div class="card__meta">
+                  <p class="tag">Category</p>
+                  <p>Cold Case</p>
+                  <p class="tag">Victims</p>
+                  <p>4</p>
+                  <p class="tag">Where</p>
+                  <p>Austin, Texas (USA)</p>
+                  <p class="tag">When</p>
+                  <p>December 5 1991</p>
+                  <p class="tag">Crime</p>
+                  <p>Murder, Arson</p>
+                </div>
+              </a>
+            </div>
+            <div class="card__titleWrap">
+              <h4 class="card__heading">
+                <a class="card__heading--link" href="javascript:void(0)">Yogurt Shop Murders</a>
+              </h4>
+              <div class="card__date">20.12.2018</div>
+            </div>
+          </div>
+          <!-- card-wrap -->
+        </div>
+        <!-- col-1-of-4 -->
+        <div class="col-1-of-4 medium-col-2-of-4">
+          <div class="card-wrap">
+            <div class="card">
+              <a href="#">
+                <img class="card__img lazyload" data-srcset="
+                      ./assets/images/yogurt-full-300w.jpg 300w,
+                      ./assets/images/yogurt-full-400w.jpg 400w,
+                      ./assets/images/yogurt-full-500w.jpg 500w,
+                      ./assets/images/yogurt-full-600w.jpg 600w
+                    " data-sizes="(max-width: 320px) 297px,
+                                (max-width: 480px) 456px,
+                               (max-width: 900px) 600px,
+                               (max-width: 1200px) 540px,
+                               (max-width: 1400px) 300px
+                              400px" data-src="./assets/images/yogurt-full-600w.jpg" alt="Photo of Victims" />
+
+                <!-- <div class="card__category">
+                        Unsolved Murder
+                      </div> -->
+
+                <div class="card__meta">
+                  <p class="tag">Category</p>
+                  <p>Cold Case</p>
+                  <p class="tag">Victims</p>
+                  <p>4</p>
+                  <p class="tag">Where</p>
+                  <p>Austin, Texas (USA)</p>
+                  <p class="tag">When</p>
+                  <p>December 5 1991</p>
+                  <p class="tag">Crime</p>
+                  <p>Murder, Arson</p>
+                </div>
+              </a>
+            </div>
+            <div class="card__titleWrap">
+              <h4 class="card__heading">
+                <a class="card__heading--link" href="javascript:void(0)">Yogurt Shop Murders</a>
+              </h4>
+              <div class="card__date">20.12.2018</div>
+            </div>
+          </div>
+          <!-- card-wrap -->
+        </div>
+        <!-- col-1-of-4 -->
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="footer__info">
+          <div class="footer__item footer__item--social">
+            <h4 class="footer__title">Join the conversation!</h4>
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link">
+                  <svg
+                    class="footer-social__icon footer-social__icon--facebook"
+                  >
+                    <use
+                      xlink:href="./assets/images/sprite.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link">
+                  <svg class="footer-social__icon footer-social__icon--twitter">
+                    <use
+                      xlink:href="./assets/images/sprite.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item--disclaimer">
+            <h4 class="footer__title">About Us</h4>
+            <p>
+              Nam iaculis, justo sit amet sagittis dignissim, mauris magna
+              efficitur tortor, in venenatis magna tortor ac lacus. Aliquam
+              suscipit metus id metus viverra sodales. Donec eleifend risus
+              nisl, eget aliquam turpis egestas et.
+            </p>
+          </div>
+          <div class="footer__item footer__item--tagcloud">
+              <div class="tagcloud">
+                <h4 class="footer__title">Tag Cloud</h4>
+                <a class="tagcloud__link" href="#">Cold Case</a>
+                <a class="tagcloud__link" href="https://www.raggiorama.it">Murder</a>
+                <a class="tagcloud__link" href="#">Suicide</a>
+                <a class="tagcloud__link" href="#">Murder</a>
+                <a class="tagcloud__link" href="#">genealogical DNA</a>
+                <a class="tagcloud__link" href="#">death by drowning</a>
+                <a class="tagcloud__link" href="#">Death by Hanging</a>
+              </div>
+            </div>
+
+          <div class="footer__item footer__item--categories">
+            <h4 class="footer__title">Crime categories</h4>
+            <ul class="footer-cat__list">
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unsolved Murders</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unsolved Disappearances</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unexplained Deaths</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Unidentified People</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Book Reviews</p>
+                </a>
+              </li>
+              <li class="footer-cat__item">
+                <a class="footer-cat__link cat-link" href="#">
+                  <p class="footer-cat__text">Movie Reviews</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item--about">
+            <h4 class="footer__title">Disclaimer</h4>
+            <p>
+              Ut a nisl non nibh semper fringilla sit amet id mauris. Praesent
+              tincidunt, mauris nec finibus vehicula, tellus massa aliquet
+              tellus, sit amet rutrum nunc magna at lacus. Aenean et ultricies
+              leo. In nisl elit, sodales in arcu ut, euismod accumsan nunc. Sed
+              quis luctus elit.
+            </p>
+          </div>
+        </div>
+        <div class="footer-credit">
+          <p class="copyright">&copy; Crime Club</p>
+          <p class="credit">Built by <a href="#">raggiorama</a></p>
+        </div>
+      </footer>
+  </div>
+  <!-- main -->
+  <div class="search">
+    <button id="btn-search-close" class="search__button search__button--close" aria-label="Close search form"
+      aria-hidden="true">
+      <svg class="close-icon">
+        <use xlink:href="./assets/images/sprite.svg#icon-cross1"></use>
+      </svg>
+    </button>
+    <form class="search__form" action="">
+      <input class="search__input" name="search" type="search" placeholder="type here" autocomplete="off"
+        autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="-1" />
+      <span class="search__info">Hit enter to search or ESC to close</span>
+    </form>
+    
+  </div>
+  <!-- search -->
+
+ <script type="module" src="./assets/scripts/App.js"></script>
+ 
+</body>
+
+</html>

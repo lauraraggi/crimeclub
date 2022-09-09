@@ -1,0 +1,16 @@
+#main {
+  position: relative;
+  left: 0%;
+  background-color: #fff;
+  min-height: 100%;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  margin: 0 auto;
+  /* max-width: $layout-width; */
+}
+
+.barba-container {
+  position: relative;
+  overflow: auto;
+
+  
+}

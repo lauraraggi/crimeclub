@@ -1,0 +1,187 @@
+@use "../abstracts" as *;
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(12, 12, 12, 0.83);
+  position: relative;
+
+  &__input {
+    font-family: $font-sans;
+    font-size: 10vw;
+    line-height: 1;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 75%;
+    padding: 0.05em 0;
+    color: $color-light-grey-2;
+    border-bottom: 2px solid;
+    border-color: $color-light-grey;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background: transparent;
+    transition: all 0.2s;
+
+    &::placeholder {
+      color: $color-medium-grey;
+    }
+
+    &:focus {
+      color: $color-light-grey;
+      outline: none;
+    }
+  }
+
+  &__form {
+    margin: 5rem 0;
+  }
+
+  &__info {
+    font-size: 90%;
+    font-weight: bold;
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    padding: 0.85em 0;
+    text-align: right;
+    color: $color-light-grey;
+    font-family: $font-monospace;
+
+    @media only screen and (max-width: $mediumLayout) {
+      display: none;
+    }
+  }
+
+  &__suggestion {
+    width: 33.33%;
+    text-align: left;
+
+    @media only screen and (max-width: $mediumLayout) {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--open {
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        background-image: url('../../assets/images/SVG/magnifying-glass.svg');
+        background-repeat: no-repeat;
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+
+    &--close {
+      position: absolute;
+      top: 2.5rem;
+      right: 5.5rem;
+      display: block;
+      color: $color-medium-grey;
+      transition: color 0.2s;
+      opacity: 0;
+      transform: scale3d(0.8, 0.8, 1);
+      transition: opacity 0.5s, transform 0.5s;
+
+      &:hover {
+        color: $color-white;
+      }
+
+      
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-red;
+
+    @media only screen and (max-width: $xsmallLayout) {
+      height: 2.2rem;
+      width: 2.2rem;
+    }
+  }
+
+  &__related {
+    color: $color-white;
+    display: flex;
+    width: 75%;
+    pointer-events: none;
+
+    @media only screen and (max-width: $mediumLayout) {
+      display: block;
+    }
+  }
+}
+
+.js {
+  & .search {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  & .search__form {
+    opacity: 0;
+    /* transform: scale3d(0.8, 0.8, 1); */
+    transition: opacity 0.22s;
+  }
+}
+
+.js body.search-open {
+  overflow: hidden;
+
+  & #main,
+  & #sidebar {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    backface-visibility: hidden;
+  }
+  & .search {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  & .search__form {
+    opacity: 1;
+    /* transform: scale3d(1, 1, 1); */
+  }
+
+  & .search__button--close {
+    opacity: 1;
+    /* transform: scale3d(1, 1, 1); */
+  }
+}
+
+.close-icon {
+  fill: currentColor;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background: url('../../assets/images/SVG/cross1.svg') no-repeat 50%;
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-white;
+    border-radius: 100%;
+    padding: 3rem;
+  }
+}

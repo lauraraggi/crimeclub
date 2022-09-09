@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+.inner {
+  display: flex;
+  justify-content: space-between;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+
+  @media only screen and (max-width: $mediumLayout) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $smallLayout) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.fadeIn {
+  transform: translateY(10vh);
+  opacity: 0;
+  /*  visibility: hidden; */
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.cards {
+  margin-top: 4rem;
+}

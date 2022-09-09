@@ -1,0 +1,35 @@
+{
+  "name": "crime-club-2022",
+  "version": "1.0.0",
+  "description": "",
+  "module": "src/assets/scripts/App.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": ["last 1 chrome versions"],
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "babel-preset-env": "^1.7.0",
+    "barba.js": "^1.0.0",
+    "modern-css-reset": "^1.4.0",
+    "parcel": "^2.3.2",
+    "sass": "^1.49.8"
+  },
+  "dependencies": {
+    "charming": "^3.0.2",
+    "gsap": "^3.9.1",
+    "imagesloaded": "^5.0.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.6.0",
+    "jquery-bridget": "^3.0.1",
+    "lodash": "^4.17.21",
+    "modernizr": "^3.12.0",
+    "stickybits": "^3.7.9",
+    "waypoints": "^4.0.1"
+  }
+}

@@ -1,0 +1,87 @@
+@use "../abstracts" as *;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  position: relative;
+}
+
+body {
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  height: 50px;
+  width: 100%;
+  border: none;
+}
+
+a {
+  &,
+  &:link {
+    color: $color-red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-dark-red;
+  }
+}
+
+.cat-link {
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  margin-bottom: 1rem;
+
+  &:link,
+  &:visited {
+    color: $color-black;
+    text-decoration: none;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: $color-red;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0, 0);
+    transform-origin: center center;
+    transition: opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
+      transform 0.4s 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  &:hover {
+    color: $color-red;
+
+    &::before {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}

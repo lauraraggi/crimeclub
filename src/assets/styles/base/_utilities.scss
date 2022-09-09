@@ -1,0 +1,95 @@
+@use "../abstracts" as *;
+
+@mixin absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
+.sticky-element {
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+.align-right {
+  float: right;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.align-center {
+  display: block;
+  margin: 2rem auto;
+}
+
+.clear {
+  @include clearfix;
+}
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.hiddenImages {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+a[href="javascript:void(0)"] {
+  cursor: not-allowed;
+}
+
+.img-wrapper {
+  &.compat-object-fit {
+    background-size: cover;
+    background-position: center center;
+    flex: 1;
+
+    .featuredArticle__img {
+      opacity: 0;
+    }
+    .post__image {
+      opacity: 0;
+    }
+  }
+
+}
+
+.js-is-sticky {
+  width: 45%;
+}

@@ -1,0 +1,242 @@
+@use "../abstracts" as *;
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5rem;
+  background-color: #fff;
+
+  &__burger-icon {
+    fill: #525251;
+    width: 30px;
+    height: 30px;
+    margin-left: 1.5rem;
+  }
+
+  &__menu-toggle {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-dark-grey;
+    font-family: $font-monospace;
+    font-size: 1.3rem;
+    margin-right: 4rem;
+    margin-left: auto;
+    cursor: pointer;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      background: url('../../assets/images/SVG/bars.svg') no-repeat 0 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    & span {
+      position: relative;
+      margin-left: 2rem;
+      display: block;
+    }
+
+    & span,
+    & span::before,
+    & span::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-dark-grey;
+      display: inline-block;
+    }
+
+    & span::before,
+    & span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    & span::before {
+      top: -0.8rem;
+    }
+
+    & span::after {
+      top: 0.8rem;
+    }
+  }
+}
+
+h1.logo {
+  margin: 0;
+  font-size: 2rem;
+}
+
+
+
+ul.navigation {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+
+  font-size: 1.6rem;
+
+  @media only screen and (max-width: $smallLayout) {
+    display: none;
+  }
+
+  li a {
+    display: block;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: $color-dark-grey;
+  }
+}
+
+#sidebar {
+  position: fixed;
+  left: 100%;
+  z-index: 900;
+  width: 25%;
+  height: 100%;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+
+  @media only screen and (max-width: 60.625em) { /* 970px*/
+    width: 40%;
+  }
+
+  @media only screen and (max-width: $smallLayout) {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: $xsmallLayout) {
+    width: 80%;
+  }
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#nav-wrap {
+  position: absolute;
+  left: -400%;
+  width: 400%; /* (100 / sidebar width) * 100 */
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+
+  @media only screen and (max-width: 60.625em) { /* 970px*/
+    left: -250%; 
+    width: 250%;
+  }
+
+  @media only screen and (max-width: $smallLayout) {
+    left: -166%;
+    width: 166%;
+  }
+
+  @media only screen and (max-width: $xsmallLayout) {
+    left: -125%;
+    width: 125%;
+  }
+}
+
+.aside-menu {
+  height: 100%;
+  overflow: hidden;
+  &__toggle {
+    padding: 30px 50px;
+  }
+}
+
+.menu {
+  &__list {
+    height: 100%;
+  }
+  &__item {
+    border-bottom: 1px solid $color-light-grey-2;
+
+    &--share {
+      padding: 1.5rem 2rem;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 1.5rem 2rem;
+    transition: transform 0.2s;
+
+    &:link {
+      color: $color-red;
+      text-decoration: none;
+    }
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    &:hover,
+    &:visited {
+      color: $color-dark-red;
+    }
+  }
+}
+
+.close-menu,
+.close-menu:link {
+  text-decoration: none;
+  font-family: $font-monospace;
+  color: $color-black;
+  font-size: 1.8rem;
+  display: block;
+  padding: 2rem 2rem;
+}
+
+html.sidebar-open {
+  & #sidebar {
+    transform: translateX(-100%);
+    overflow: auto;
+  }
+
+  & #main {
+    transform: translateX(-25%); /* same value as sidebar width */
+
+    @media only screen and (max-width: 60.625em) { /* 970px*/
+      transform: translateX(-40%);
+    }
+    @media only screen and (max-width: $smallLayout) {
+      transform: translateX(-60%);
+    }
+    @media only screen and (max-width: $xsmallLayout) {
+      transform: translateX(-80%);
+    }
+    opacity: 0.2;
+  }
+
+  & body {
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  & #nav-wrap {
+    opacity: 0;
+  }
+}
+
+body.scrolled {
+  & #nav-wrap {
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  }
+}
+
+.progress-bar {
+  height: 6px;
+}
+
+.sidebar-open {
+  & #main {
+    pointer-events: none;
+  }
+}

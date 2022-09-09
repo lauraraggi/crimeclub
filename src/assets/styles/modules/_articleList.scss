@@ -1,0 +1,252 @@
+@use "../abstracts" as *;
+
+.article-list {
+  flex: 0 0 $col-2-of-4;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    flex: 0 0 48.5%;
+  }
+}
+
+.article {
+  &__item {
+    margin-bottom: $gutter-horizontal;
+    overflow: hidden;
+
+    &--with-border {
+      border: 1px solid $color-medium-grey;
+    }
+
+    &__clickable {
+      text-decoration: none;
+      color: currentColor;
+      display: flex;
+      flex-direction: column;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        display: block;
+      }
+   
+
+      &:link,
+      &:hover {
+        color: $color-black;
+      }
+
+      &--media {
+        &:link,
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 2.8rem;
+      line-height: 1.3;
+      transition: all 0.2s;
+
+      @media only screen and (max-width: $largeLayout) {
+        font-size: 2.5rem;
+      }
+
+      @media only screen and (max-width: $mediumLayout) {
+        font-size: 2.2rem;
+      }
+    }
+
+    &--news {
+      & .article__item__inner {
+        text-align: left;
+        align-items: unset;
+      }
+    }
+
+    &__inner {
+      padding: 2rem;
+      display: flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        & > * {
+          width: 100%;
+        }
+      }
+    }
+
+    &-image {
+      display: flex;
+      transition: all 0.2s;
+
+      &--media {
+        -webkit-mask-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0, black),
+          color-stop(0.35, black),
+          color-stop(0.5, black),
+          color-stop(0.65, black),
+          color-stop(0.85, rgba(0, 0, 0, 0.6)),
+          color-stop(1, transparent)
+        );
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        transition: all 0.2s;
+      }
+    }
+
+    &-image-wrap {
+      border-radius: 100%;
+      overflow: hidden;
+      width: 60%;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0)
+    }
+
+    &-header {
+      text-align: center;
+      padding: 0.8rem 1.2rem;
+      color: $color-white;
+      background-color: $color-black;
+      font-family: $font-monospace;
+      font-size: 1.5rem;
+      align-self: center;
+
+      &--full {
+        align-self: auto;
+      }
+
+      &--abs {
+        position: absolute;
+        z-index: 9;
+        top: 0;
+      }
+    }
+
+    &__preview {
+      margin: 2rem 0;
+      font-size: 1.9rem;
+    }
+
+    &__date {
+      font-size: 1.5rem;
+      color: $color-dark-grey;
+      margin: 0.5rem 0 1rem 0;
+      font-family: $font-monospace;
+
+      &--media {
+        color: $color-white;
+      }
+    }
+
+
+
+    &:hover &-image {
+      transform: scale(1.1);
+
+      @media only screen and (hover: none) {
+        transform: none;
+      }
+
+      &--media {
+        -webkit-filter: none;
+        filter: none;
+
+        @media only screen and (hover: none) {
+          -webkit-mask-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, black),
+            color-stop(0.35, black),
+            color-stop(0.5, black),
+            color-stop(0.65, black),
+            color-stop(0.85, rgba(0, 0, 0, 0.6)),
+            color-stop(1, transparent)
+          );
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+          transition: all 0.2s;
+        }
+      }
+    }
+
+    &:hover .image--news {
+      transform: scale(1.1);
+
+      @media only screen and (hover: none) {
+        transform: none;
+      }
+    }
+
+    &:hover &__title {
+      color: $color-red;
+    }
+
+    &--media {
+      color: $color-white;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+39,271f1f+53&0+38,1+55 */
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.06) 10%,
+        rgba(39, 31, 31, 0.88) 10%,
+        $color-black 55%
+      );
+
+      & .article__item__title {
+        color: $color-white;
+      }
+
+      &:hover .article__item__title {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.news-meta {
+  display: flex;
+  font-family: $font-monospace;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: $color-dark-grey;
+  &__dot {
+    margin: 0 10px;
+  }
+
+  @media only screen and (max-width: $smallLayout) {
+    font-size: 1.2rem;
+  }
+}
+
+.image-wrap--news {
+  overflow: hidden;
+  height: 22rem;
+
+  @media only screen and (max-width: $xlargeLayout) {
+    height: auto;
+  }
+}
+
+.image--news {
+  transition: all 0.2s;
+}
+
+/* Sizing Classes for Isotope */
+.grid-sizer,
+.article__item {
+  width: $col-1-of-2;
+
+  @media only screen and (max-width: $smallLayout) {
+    width: 100%;
+  }
+}
